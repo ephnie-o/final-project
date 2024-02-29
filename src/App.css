@@ -1,38 +1,163 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.navbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+.hamburger {
+  display: none;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul {
+  display: inline-grid;
+  grid-template-columns: repeat(6, auto);
+  column-gap: 10px;
+  justify-self: start;
 }
+
+li {
+  list-style: none;
+}
+
+a {
+  padding: 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #495e57;
+}
+
+.home {
+  background-color: #495e57;
+}
+
+img {
+  justify-self: center;
+}
+
+.basket {
+  background: unset;
+  border: unset;
+  cursor: pointer;
+  justify-self: end;
+  padding-right: 40px;
+}
+
+.basket svg {
+  stroke: #495e57;
+}
+
+.about{
+  padding: 10px 40px 40px 40px;
+  background-color: #495e57;
+}
+
+.about h1{
+  color: #f4ce14;
+}
+
+.about h2{
+  color: #ffffff;
+}
+
+.about p{
+  color: #ffffff;
+}
+
+.about button{
+  background-color: #f4ce14;
+  border-radius: 16px;
+  height: 60px;
+  width: 300px;
+  border: none;
+  cursor: pointer;
+  padding: auto;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.about button:hover{
+  box-shadow: 0 0 10px #ffffff;
+}
+
+.delivery{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.delivery-menu{
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  column-gap: 10px;
+}
+
+.delivery-menu button{
+  border-radius: 16px;
+  height: 36px;
+  width: 93px;
+  border: none;
+  cursor: pointer;
+}
+
+.delivery-menu button:hover{
+  background-color: #495e57;
+}
+
+.delivery-menu button:active{
+  background-color: #495e57;
+}
+
+@media screen and (max-width: 800px) {
+  .menu{
+    display: none;
+    position: absolute;
+    top: 22px;
+    left: 0px;
+    padding: 10px;
+    background-color: #f4ce14;
+    border-radius: 16px;
+  }
+
+  .menu.open {
+    display: block;
+  }
+
+  li {
+    margin: 10px;
+  }
+
+  .hamburger {
+    display: inline-grid;
+    border: unset;
+    background: unset;
+  }
+
+  .hamburger svg {
+    stroke: #495e57;
+  }
+
+  .basket {
+    padding-right: 10px;
+  }
+
+  .about {
+    padding-left: 10px;
+  }
+
+  .about p{
+    max-width: 50%;
+  }
+
+  .delivery{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+}
+
+
+
