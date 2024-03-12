@@ -48,8 +48,9 @@ const Login = () => {
             <p className='p1'>Sign in to collect points</p>
             <form onSubmit={handleSubmit}>
                 <fieldset className="loginForm">
-                    <label>
+                    <label htmlFor='Fname' data-testid="firstname">
                         <input
+                        id='Fname'
                         name="Fname"
                         type='text'
                         placeholder = '*First Name'
@@ -63,7 +64,7 @@ const Login = () => {
                         />
                         {errorFirstName && firstName.length<= 0 ? <div className='errorMessage'>*First name is required</div>: 'Enter your first name'}
                     </label>
-                    <label>
+                    <label data-testid="lastname">
                         <input
                         name="Lname"
                         type='text'
@@ -78,7 +79,7 @@ const Login = () => {
                         />
                         {errorLastName && lastName.length<= 0 ? <div className='errorMessage'>*Last name is required</div>: 'Enter your last name'}
                     </label>
-                    <label>
+                    <label data-testid="phonenumber">
                         <input
                         name="tel"
                         type='number'
@@ -93,7 +94,7 @@ const Login = () => {
                         />
                         {errorTel && tel.length<= 0 ? <div className='errorMessage'>*Phone number is required</div>: 'Enter your phone number'}
                     </label>
-                    <label>
+                    <label data-testid="email">
                         <input
                         name="email"
                         type='email'
@@ -108,7 +109,7 @@ const Login = () => {
                         />
                         {errorEmail && email.length<= 0 ? <div className='errorMessage'>*Email is required</div>: 'Enter your email'}
                     </label>
-                    <label className='passwordField'>
+                    <label className='passwordField' data-testid="password">
                         <input
                         name='password'
                         value={password.value}
@@ -139,7 +140,7 @@ const Login = () => {
                         />
                     </label>
                     <Link to='/confirmation'>
-                    <button className='button' type="submit" disabled = {!getFormIsValid()} >
+                    <button className='button' type="submit" disabled = {!getFormIsValid()} aria-label="On Click">
                         Book
                     </button>
                     </Link>
