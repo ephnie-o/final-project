@@ -1,13 +1,10 @@
-import './App.css';
-import Nav from "./Nav";
-import Main from './Main';
+import Main from './components/Main';
 
 function App() {
   return (
-    <main className="App">
-      <Nav />
-      <Main />
-    </main>
+    <>
+    <Main />
+    </>
   );
 }
 

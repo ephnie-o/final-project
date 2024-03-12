@@ -6,6 +6,13 @@
   background-color: #ffffff;
 }
 
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 .hamburger {
   display: none;
   cursor: pointer;
@@ -22,16 +29,12 @@ li {
   list-style: none;
 }
 
-a {
+.link {
   padding: 10px;
   text-decoration: none;
 }
 
-a:hover {
-  background-color: #495e57;
-}
-
-.home {
+.link:hover {
   background-color: #495e57;
 }
 
@@ -51,28 +54,31 @@ img {
   stroke: #495e57;
 }
 
+.heading1 {
+  margin-bottom: 0;
+  color: #f4ce14;
+  font-size: 32px;
+}
+
+.heading2 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
 .about{
   padding: 10px 40px 40px 40px;
   background-color: #495e57;
 }
 
-.about h1{
-  color: #f4ce14;
-}
-
-.about h2{
+.p1{
   color: #ffffff;
 }
 
-.about p{
-  color: #ffffff;
-}
-
-.about button{
+.button{
   background-color: #f4ce14;
   border-radius: 16px;
   height: 60px;
-  width: 300px;
+  width: 50%;
   border: none;
   cursor: pointer;
   padding: auto;
@@ -80,13 +86,14 @@ img {
   font-weight: bold;
 }
 
-.about button:hover{
+.button:hover{
   box-shadow: 0 0 10px #ffffff;
 }
 
 .delivery{
   padding-left: 40px;
   padding-right: 40px;
+  padding-bottom: 80px;
 }
 
 .delivery-menu{
@@ -98,7 +105,7 @@ img {
 .delivery-menu button{
   border-radius: 16px;
   height: 36px;
-  width: 93px;
+  width: 100px;
   border: none;
   cursor: pointer;
 }
@@ -111,12 +118,243 @@ img {
   background-color: #495e57;
 }
 
-@media screen and (max-width: 800px) {
+.delivery section {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.delivery section::-webkit-scrollbar {
+  display: none;
+}
+
+
+.lunch-menu {
+  padding: 40px;
+  padding-top: 10px;
+}
+
+.lunch-menu p{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 50%;
+}
+
+.meal {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #DADADA;
+}
+
+.meal .description {
+  max-width: 60%;
+}
+
+.meal-img{
+  margin-right: 40px;
+  margin-top: 30px;
+}
+
+.booking, .login {
+  background-color: #495e57;
+  padding-left: 40px;
+  padding-top: 1px;
+  padding-bottom: 50px;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  margin-right: 40px;
+}
+
+.restaurant {
+  width: 49%;
+}
+
+.dateTime {
+  display: flex;
+  gap: 15px;
+}
+
+.dateTime > div {
+  flex: 1;
+}
+
+.date, .time {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  color: #495e57;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.time {
+  height: 55px;
+  width: 100%;
+}
+
+
+fieldset {
+  border: none;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.noOfDiners, .occasion {
+  width: 97.2%;
+  height: 50px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #495e57;
+}
+
+.seatingOptions {
+  display: flex;
+  flex-direction: column;
+}
+
+.seatingOptions h3 {
+  color: #ffffff;
+}
+
+.seatingOptions span {
+  font-size: small;
+  margin-left: 20px;
+}
+
+.standard, .outside {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 30px;
+  height: 30px;
+  margin-left: 80%;
+  border-radius: 50%;
+  border: 2px solid #495e57;
+  background-color: #ffffff;
+  outline: none;
+  position: relative;
+}
+
+.standard:checked::before, .outside:checked::before {
+  content: '\2713';
+  font-size: 20px;
+  color: #495e57;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.standardLabel, .outsideLabel {
+  width: 10%;
+  color: #ffffff;
+}
+
+.radioOption {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.letsGo {
+  width: 96.5%;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginForm input {
+  display: block;
+  width: 96%;
+  height: 40px;
+}
+
+.loginForm label {
+  width: 100%;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.loginForm button {
+  width: 96.5%;
+}
+
+.loginForm textarea {
+  width: 96%;
+  height: 100px;
+}
+
+.login p{
+  margin-top: 50px;
+}
+
+.errorMessage {
+  color: red;
+}
+
+.passwordField {
+  position: relative;
+}
+
+.passwordField .eyeIcon {
+  position: absolute;
+  top: 22%;
+  right: 20px;
+  color: #495e57;
+  cursor: pointer;
+}
+
+.background {
+  background-color: #495e57;
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 30px;
+}
+
+.confirmationIcon {
+  stroke: black;
+  width: 100%;
+  height: 100%;
+}
+
+.thankYou {
+  color: #f4ce14;
+  padding-top: 10%;
+  padding-bottom: 20%;
+  font-size: 50px;
+  text-align: center;
+}
+
+.message {
+  color: #ffffff;
+  padding-top: 5%;
+  padding-bottom: 10%;
+  text-align: center;
+}
+
+.confirmationButton {
+  width: 100%;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 850px) {
   .menu{
     display: none;
     position: absolute;
     top: 22px;
-    left: 0px;
+    left: 10px;
     padding: 10px;
     background-color: #f4ce14;
     border-radius: 16px;
@@ -146,18 +384,49 @@ img {
 
   .about {
     padding-left: 10px;
+    max-height: 15rem;
+    padding-top: 1px;
   }
 
   .about p{
-    max-width: 50%;
+    max-width: 80%;
   }
 
   .delivery{
     padding-left: 10px;
     padding-right: 10px;
+    max-height: 2rem;
   }
 
+  .lunch-menu {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .meal-img, .images, .dateTime{
+    margin-right: 10px;
+  }
+
+  .booking, .login {
+    padding-left: 10px;
+  }
+
+  .noOfDiners, .occasion, .loginForm .button {
+    width: 98.7%;
+  }
+
+  .letsGo, .login input, .login textarea{
+    width: 98%;
+  }
+
+  .background {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
 }
+
 
 
 
