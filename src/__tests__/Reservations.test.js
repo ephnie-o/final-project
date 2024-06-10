@@ -1,7 +1,6 @@
 import { render, screen, cleanup, fireEvent, getByLabelText, getByTestId } from '@testing-library/react';
 import Reservations from '../components/Reservations';
-import { MemoryRouter } from 'react-router-dom'; 
-import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from 'react-router-dom';
 
 afterEach(() => {
     cleanup();
