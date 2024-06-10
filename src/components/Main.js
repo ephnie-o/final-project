@@ -46,7 +46,7 @@ const Main = () => {
         <main>
           <nav className={`navbar ${fixedNav ? 'fixed' : ''}`}>
             <ul onClick={toggleMenu} className={`menu ${isOpen ? 'open' : ''}`}>
-              <li><Link to="/" className="link link-home">Home</Link></li>
+              <li><Link to="/" className="link link-home">Homepage</Link></li>
               <li><Link to="/about" className="link link-about">About</Link></li>
               <li><Link to="/menu" className="link link-menu">Menu</Link></li>
               <li><Link to="/reservations" className="link link-reservations">Reservations</Link></li>
